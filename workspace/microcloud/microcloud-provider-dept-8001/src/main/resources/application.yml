@@ -1,0 +1,35 @@
+server:
+  port: 8001
+#spring:
+#  datasource:
+#    type: com.alibaba.druid.pool.DruidDataSource
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://192.168.121.11:3306/mldn?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+#    username: root
+#    password: root123
+#    dbcp2:
+#      initial-size: 5
+#      min-idle: 5
+#      max-total: 20
+#      max-wait-millis: 5000
+#  application:
+#    name: microcloud-provider-dept
+#
+#mybatis:
+#  config-location: classpath:mybatis/mybatis.xml
+#  type-aliases-package: com.lz.pojo
+#  mapper-locations:
+#    - classpath:mybatis/mapper/**/*.xml
+eureka:
+  client:          # 客户端进行 eureka 注册配置
+    service-url:
+     defaultZone: http://ninja:ninja650@eureka-7001.com:7001/eureka, http://ninja:ninja650@eureka-7002.com:7002/eureka, http://ninja:ninja650@eureka-7003.com:7003/eureka
+  instance:
+    instance-id: dept-8001.com    # 设置信息列表显示的主机名称
+    prefer-ip-address: true       # 访问路径设置为IP地址
+#资源文件信息
+info:
+  app.name: microcloud
+  company.name: com.lz
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
